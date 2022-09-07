@@ -1,0 +1,287 @@
+/* Fuentes cargadas */
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/source-serif-pro/source-serif-pro.woff2') format('woff2'),
+       url('../fonts/source-serif-pro/source-serif-pro.woff') format('woff'),
+       url('../fonts/source-serif-pro/source-serif-pro.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Charter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/charter/charter_regular.woff') format('woff'),
+         url('../fonts/charter/charter_regular.otf') format('otf'),
+         url('../fonts/charter/charter_regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Valkyrie c3';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/valkyrie-c3/valkyrie-c3.woff2') format('woff2'),
+         url('../fonts/valkyrie-c3/valkyrue-c3.woff') format('woff'),
+         url('../fonts/valkyrie-c3/valkyrie-c3.otf') format('otf'),
+         url('../fonts/valkyrie-c3/valkyrie-c3.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Valkyrie t3';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/valkyrie-t3/valkyrie-t3.woff2') format('woff2'),
+         url('../fonts/valkyrie-t3/valkyrie-t3.woff') format('woff'),
+         url('../fonts/valkyrie-t3/valkyrie-t3.otf') format('otf'),
+         url('../fonts/valkyrie-t3/valkyrie-t3.ttf') format('truetype');
+}
+@font-face {
+    font-family: maximilian;
+    src: url(../fonts/maximilian.ttf)
+}
+/* Raíz para determinar la fuente */
+:root {
+    font-family: 'Valkyrie t3', 'Charter', 'Source Serif Pro', serif;
+    background-color: white;
+}
+
+/* Título de la página personal */
+.heada {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Caracterización de la página, división en grid */
+body {
+    display: grid;
+    grid-template-columns: 1fr  minmax(0, 23cm) 1fr;
+    /* color: #f0f0f0; */
+    color: black;
+    line-height: 1.35em;
+    /*background-color: #292929;*/
+    /*background-color: #180707;*/
+    font-size: 21.84px;
+    text-align: left;
+    font-weight: 100;
+    padding-left: 0.3cm;
+    padding-right: 0.3cm;
+    hyphens: auto;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+}
+body * {
+    grid-column: 2 / 3 ;
+}
+@media (max-width:24cm) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Barra de menún de página personal */
+.menubar {
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-style: none;
+    margin-top: 1.35em;
+    margin-bottom: 1.35em;
+    align-self: center;
+}
+.menubar li {
+    text-align: left;
+    margin-bottom: 2em;
+}
+.menubar li a {
+    color: black;
+    font-size: 24px;
+}
+.menubar li a:hover {
+    color: #d61500;
+}
+@media (max-width:24cm) {
+    .menubar li a {
+        font-size: 18px;
+    }
+}
+
+/* Links en general */
+a {
+    background: none;
+    text-decoration: none;
+    font-family: "Valkyrie c3";
+    text-transform: lowercase;
+    color: black;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+    /* color: #e9c31c; */
+    color: #d61500;
+}
+
+/* Cuerpo textual */
+main {
+    display: grid;
+    grid-template-columns: 1fr  minmax(0, 16cm) 1fr;
+}
+main * {
+    grid-column: 2 /3 ;
+}
+@media (max-width:24cm) {
+    main {
+        grid-template-columns: 1fr minmax(0, 11cm) 1fr;
+        padding-left: 0.3cm;
+        padding-right: 0.3cm;
+    }
+}
+
+/* Encabezados */
+h1 {
+    color:  black;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Valkyrie c3";
+    line-height: 1.5em;
+    margin: 0;
+    letter-spacing: 0.11em;
+    line-height: 1.35em;
+    hyphens: none;
+    margin-top: 2em;
+    margin-bottom: 3em;
+
+}
+
+@media (max-width:24cm) {
+    h1 {
+        font-size: 22px;
+    }
+}
+h2 {
+    color:  black;
+    font-size: 24px;
+    font-family: 'Charter';
+    margin-bottom: 0;
+    letter-spacing: 0.11em;
+    margin-bottom: 0.1em;
+    margin-top: 1.5em;
+}
+@media (max-width:24cm) {
+    h2 {
+        font-size: 18px;
+    }
+}
+/*  .inicial {
+    margin: 7px;
+    float: left;
+    font-family: maximilian;
+    font-size: 800%;
+    line-height: 1.4cm;
+    color: #e9c31c;
+}
+@media (max-width:24cm) {
+    .inicial {
+        font-size: 650%;
+        line-height: 1.2cm}
+} */
+/* Párrafos */
+p {
+    margin-bottom: 1em;
+    margin-top: 0em;
+}
+
+/* Aquí va todo lo relacionado con el menú de navegación al pie de la página */
+footer {
+    padding-left: 0.3cm;
+    padding-right: 0.3cm;
+    margin-top: 13em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.pie {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.pie li {
+
+    width: 0;
+    flex: 1 1 0;
+    flex-wrap: wrap;
+    text-align: center;
+    hyphens: none;
+}
+.pie li a {
+    color: black;
+    font-size: 20px;
+}
+
+.pie li a:hover {
+    color: #d61500;
+}
+
+@media (max-width:24cm) {
+    .pie li a {
+        font-size: 14px;
+    }
+}
+
+/* Aquí comienzan los elementos del Zibaldone */
+.menuz {
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-style: none;
+    align-self: center;
+}
+.menuz li {
+    text-align: right;
+    margin-bottom: 1.3em;
+}
+.menuz li a {
+    color: black;
+    font-size: 24px;
+}
+.menuz li a:hover {
+    color: #d61500;
+}
+.headb {
+    margin-bottom: 00px;
+    border-style: none;
+    line-height: 0;
+}
+
+.headz {
+    margin-bottom: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.listap li a {
+    text-transform: none;
+    font-family: "Valkyrie t3";
+}
+
+/* Firma de las entradas con nombre y fecha */
+.firma {
+    font-family: "Valkyrie c3";
+    text-align: right;
+}
+
+/* Título y formato de referencia de entradas sobre libros y películas */
+.libro {
+    margin-bottom: 2em;
+}
+.referencia {
+    text-align: left;
+    margin-bottom: 1em;
+}
